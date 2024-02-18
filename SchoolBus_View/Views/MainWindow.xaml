@@ -1,0 +1,29 @@
+﻿<Window x:Class="SchoolBus_View.Views.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SchoolBus_View.Views"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="500" Width="1000" Background="#FF515151">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="7*"/>
+        </Grid.ColumnDefinitions>
+
+        <StackPanel>
+            <Image Source="{StaticResource bus}" Width="80" Height="70" Margin="5"></Image>
+            <Button Command="{Binding ClassCommand}" Background="Gold" FontSize="15" Content="Class" FontWeight="Bold" Height="30" Margin="10" BorderThickness="0"/>
+            <Button Command="{Binding ParentCommand}"  Background="Gold" FontSize="15" Content="Parent" FontWeight="Bold" Height="30" Margin="10" BorderThickness="0"/>
+            <Button Command="{Binding StudentCommand}" Background="Gold" FontSize="15" Content="Student" FontWeight="Bold" Height="30" Margin="10" BorderThickness="0"/>
+            <Button Command="{Binding CarCommand}" Background="Gold" FontSize="15" Content="Car" FontWeight="Bold" Height="30" Margin="10" BorderThickness="0"/>
+            <Button Command="{Binding DriverCommand}" Background="Gold" FontSize="15" Content="Driver" FontWeight="Bold" Height="30" Margin="10" BorderThickness="0"/>
+            <Button Command="{Binding CreateRideCommand}" Background="Gold" FontSize="15" Content="Create Ride" FontWeight="Bold" Height="30" Margin="10" BorderThickness="0"/>
+            <Button Command="{Binding RideCommand}"  Background="Gold" FontSize="15" Content="Rides" FontWeight="Bold" Height="30" Margin="10" BorderThickness="0"/>
+        </StackPanel>
+
+        <ContentControl  Grid.Column="1" Content="{Binding CurrentViewModel}"></ContentControl>
+
+    </Grid>
+</Window>

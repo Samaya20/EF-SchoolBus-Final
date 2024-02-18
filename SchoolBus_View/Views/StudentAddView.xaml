@@ -1,0 +1,63 @@
+﻿<Window x:Class="SchoolBus_View.Views.StudentAddView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SchoolBus_View.Views"
+        mc:Ignorable="d"
+        Title="StudentAddView" Height="450" Width="800" Background="DimGray">
+    <Canvas>
+        <Label FontSize="20" Foreground="white" FontWeight="Bold" Content="FirstName" HorizontalAlignment="Left" Canvas.Left="59" VerticalAlignment="Center" Canvas.Top="17"/>
+        <TextBox FontSize="20" Text="{Binding NewStudent.FirstName}" Height="30" Width="200" Canvas.Left="63" Canvas.Top="54" HorizontalAlignment="Left" VerticalAlignment="Top"></TextBox>
+        <Label FontSize="20" Foreground="white" FontWeight="Bold" Content="LastName" Canvas.Left="513" HorizontalAlignment="Left" VerticalAlignment="Center" Canvas.Top="17"/>
+        <Label Foreground="white" FontSize="20" FontWeight="Bold" Content="" Canvas.Left="412" Canvas.Top="76" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+        <Label Foreground="white" FontSize="20" FontWeight="Bold" Content="Class&#xD;&#xA;" Canvas.Left="152" Canvas.Top="121" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+        <Label Foreground="white" FontSize="20" FontWeight="Bold" Content="Parent&#xA;" Canvas.Left="556" Canvas.Top="120" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+        <Label Foreground="white" FontSize="20" FontWeight="Bold" Content="Address&#xA;" Canvas.Left="296" Canvas.Top="15" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+        <TextBox FontSize="20" Text="{Binding NewStudent.LastName}" Height="30" Width="200" Canvas.Left="517" Canvas.Top="54" HorizontalAlignment="Left" VerticalAlignment="Top"></TextBox>
+        <TextBox FontSize="20" Text="{Binding NewStudent.Address}" Height="30" Width="200" Canvas.Left="300" Canvas.Top="54" HorizontalAlignment="Left" VerticalAlignment="Center"></TextBox>
+
+
+        <ListBox SelectedItem="{Binding SelectedClass}" Width="250" Height="100" Canvas.Left="62" Canvas.Top="207" ItemsSource="{Binding Classes}" HorizontalAlignment="Left" VerticalAlignment="Center">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="120"/>
+                            <ColumnDefinition Width="120"/>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Grid.Column="0" Text="{Binding Id}" FontSize="12" VerticalAlignment="Center" HorizontalAlignment="Center" TextAlignment="Center"/>
+                        <TextBlock Grid.Column="1" Text="{Binding Name}" FontSize="12" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                    </Grid>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+
+        <ListBox SelectedItem="{Binding SelectedParent}" Width="250" Height="100" Canvas.Left="467" Canvas.Top="208" ItemsSource="{Binding Parents}" HorizontalAlignment="Left" VerticalAlignment="Center">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="120"/>
+                            <ColumnDefinition Width="120"/>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Grid.Column="0" Text="{Binding FirstName}" FontSize="12" VerticalAlignment="Center" HorizontalAlignment="Center" TextAlignment="Center"/>
+                        <TextBlock Grid.Column="1" Text="{Binding LastName}" FontSize="12" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                    </Grid>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+
+        <StackPanel  Canvas.Left="63" Canvas.Top="159" Orientation="Horizontal" Background="Gold" HorizontalAlignment="Left" VerticalAlignment="Center" Width="250">
+            <Label FontWeight="DemiBold" FontSize="20" Width="106" Height="50" Content="Id" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+            <Label FontWeight="DemiBold" FontSize="20" Width="116" Height="50" Content="Name" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+        </StackPanel>
+
+        <StackPanel  Canvas.Left="467" Canvas.Top="158" Orientation="Horizontal" Background="Gold" HorizontalAlignment="Left" VerticalAlignment="Center" Width="250">
+            <Label FontWeight="DemiBold" FontSize="20" Width="117" Height="50" Content="Name" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+            <Label FontWeight="DemiBold" FontSize="20" Width="144" Height="50" Content="LastName" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+        </StackPanel>
+
+        <Button Command="{Binding Add_Button}" Background="Gold" Content="Add" FontSize="20" FontWeight="Bold" Width="228" Height="46" Canvas.Left="276" Canvas.Top="335" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+    </Canvas>
+</Window>

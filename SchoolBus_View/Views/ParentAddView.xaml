@@ -1,0 +1,19 @@
+﻿<Window x:Class="SchoolBus_View.Views.ParentAddView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SchoolBus_View.Views"
+        mc:Ignorable="d"
+        Title="ParentAddView" WindowStartupLocation="CenterScreen" Height="310" Width="300" Background="DimGray">
+    <Canvas>
+        <Label FontSize="20" Foreground="white" FontWeight="Bold" Content="FirstName" HorizontalAlignment="Left" Canvas.Left="46" VerticalAlignment="Center" Canvas.Top="7"/>
+        <TextBox Text="{Binding NewParent.FirstName}" Height="30" Width="200" Canvas.Left="50" Canvas.Top="41" HorizontalAlignment="Center" VerticalAlignment="Top"></TextBox>
+        <Label FontSize="20" Foreground="white" FontWeight="Bold" Content="LastName" Canvas.Left="47" Canvas.Top="80" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+        <TextBox Text="{Binding NewParent.LastName}" Height="30" Width="200" Canvas.Left="50" Canvas.Top="116" HorizontalAlignment="Center" VerticalAlignment="Top"></TextBox>
+        <Label FontSize="20" Foreground="white" FontWeight="Bold" Content="Phone" Canvas.Left="46" Canvas.Top="149" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+        <TextBox Text="{Binding NewParent.PhoneNumber}" Height="30" Width="200" Canvas.Left="50" Canvas.Top="186" HorizontalAlignment="Center" VerticalAlignment="Top"></TextBox>
+
+        <Button Command="{Binding Add_Button}" Background="Gold" Content="Add" FontSize="20" FontWeight="Bold" Width="200" Height="38" Canvas.Left="50" Canvas.Top="235" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+    </Canvas>
+</Window>

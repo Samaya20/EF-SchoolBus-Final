@@ -1,0 +1,19 @@
+﻿<Window x:Class="SchoolBus_View.Views.EditViews.ParentEditView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SchoolBus_View.Views.EditViews"
+        mc:Ignorable="d"
+        Title="ParentEditView" WindowStartupLocation="CenterScreen" Height="330" Width="320" Background="DimGray">
+    <Canvas>
+        <Label Foreground="white" FontSize="20" FontWeight="Bold" Content="FirstName" HorizontalAlignment="Center" Canvas.Left="48" VerticalAlignment="Top" Canvas.Top="10"/>
+        <TextBox Text="{Binding NewParent.FirstName}" Height="30" Width="200" Canvas.Left="50" Canvas.Top="41" HorizontalAlignment="Center" VerticalAlignment="Top"></TextBox>
+        <Label Foreground="white" FontSize="20" FontWeight="Bold" Content="LastName" Canvas.Left="47" Canvas.Top="73" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+        <TextBox Text="{Binding NewParent.LastName}" Height="30" Width="200" Canvas.Left="50" Canvas.Top="109" HorizontalAlignment="Center" VerticalAlignment="Top"></TextBox>
+        <Label Foreground="white" FontSize="20" FontWeight="Bold" Content="Phone" Canvas.Left="49" Canvas.Top="139" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+        <TextBox Text="{Binding NewParent.PhoneNumber}" Height="30" Width="200" Canvas.Left="50" Canvas.Top="176" HorizontalAlignment="Center" VerticalAlignment="Top"></TextBox>
+
+        <Button Command="{Binding Update_Button}" Background="Gold" Content="Update" FontSize="20" FontWeight="Bold" Width="200" Height="38" Canvas.Left="50" Canvas.Top="227" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+    </Canvas>
+</Window>

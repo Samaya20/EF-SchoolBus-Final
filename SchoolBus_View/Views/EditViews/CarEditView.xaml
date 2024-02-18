@@ -1,0 +1,19 @@
+﻿<Window x:Class="SchoolBus_View.Views.EditViews.CarEditView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SchoolBus_View.Views.EditViews"
+        mc:Ignorable="d"
+        Title="CarEditView" WindowStartupLocation="CenterScreen" Height="330" Width="320" Background="DimGray">
+    <Canvas>
+        <Label Foreground="white" FontSize="20" FontWeight="Bold" Content="Name" HorizontalAlignment="Center" Canvas.Left="48" VerticalAlignment="Top" Canvas.Top="10"/>
+        <TextBox Text="{Binding NewCar.Name}" Height="30" Width="200" Canvas.Left="50" Canvas.Top="41" HorizontalAlignment="Center" VerticalAlignment="Top"></TextBox>
+        <Label Foreground="white" FontSize="20" FontWeight="Bold" Content="Number" Canvas.Left="47" Canvas.Top="76" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+        <TextBox Text="{Binding NewCar.Number}" Height="30" Width="200" Canvas.Left="50" Canvas.Top="112" HorizontalAlignment="Center" VerticalAlignment="Top"></TextBox>
+        <Label Foreground="white" FontSize="20" FontWeight="Bold" Content="Seat Count" Canvas.Left="47" Canvas.Top="146" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+        <TextBox Text="{Binding NewCar.SeatCount}" Height="30" Width="200" Canvas.Left="50" Canvas.Top="184" HorizontalAlignment="Center" VerticalAlignment="Top"></TextBox>
+
+        <Button Command="{Binding Update_Button}" Background="Gold" Content="Update" FontSize="20" FontWeight="Bold" Width="200" Height="38" Canvas.Left="50" Canvas.Top="235" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+    </Canvas>
+</Window>

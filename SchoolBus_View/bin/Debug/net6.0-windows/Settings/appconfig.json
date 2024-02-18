@@ -1,0 +1,5 @@
+{
+  "ConnectionStrings": { // localdb etmeyi yaddan cixarma
+    "DefaultConnection": "Data Source=DESKTOP-ASUS\\SQLEXPRESS;Initial Catalog=SchoolBusSystem;Integrated Security=True;Connect Timeout=30;Encrypt=False;Trust Server Certificate=True;"
+  }
+}
